@@ -64,7 +64,7 @@
 }
 
 a {
-  color: #1772d0;
+  color: #005CAF;
   text-decoration: none;
 }
 
@@ -89,21 +89,15 @@ strong {/Users/yichi/Pictures/Photos Library.photoslibrary/resources/renders/A/A
   font-size: 16px;
 }
 
-h2 {
-  margin: 0;
-  font-weight: normal;
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 22px;
-}
-
 .papertitle {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 700;
 }
 
+
 .name {
-  padding-top: 22px;
+  padding-top: 21px;
   margin: 0;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 33px;
@@ -124,6 +118,8 @@ h2 {
   -webkit-transition: opacity .2s ease-in-out;
 }
 
+h1{font-size: 22px;}
+
 .fade {
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
@@ -133,3 +129,4 @@ h2 {
 span.highlight {
   background-color: #ffffd0;
 }
+.column {  float: left;  width: 50%;}/* Clear floats after the columns */.row:after {  content: "";  display: table;  clear: both;}
