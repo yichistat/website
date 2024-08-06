@@ -3,6 +3,45 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">  
 
   <head>
+     <style>
+        .plain-text {
+            font-size: 16px;
+            font-style: italic;
+        }
+
+        .hidden-address {
+            display: none;
+        }
+
+        .address-container {
+            display: inline;
+        }
+
+        .highlight-box {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+        }
+                .justified-text {
+            text-align: justify;
+        }
+    </style>
+    
+        <style>
+        .plain-text {
+            font-size: 16px;
+            font-style: italic;
+        }
+
+        .hidden-address {
+            display: none;
+        }
+
+        .address-container {
+            display: inline;
+        }
+    </style>
         <style>
         .plain-text {
             font-size: 16px ;
@@ -30,14 +69,17 @@
                   Yichi Zhang
                   
             <div><p>Welcome! </p>
-   
-            <p>I am an assistant professor in <a href="https://stat.indiana.edu/index.html">Department of Statistics</a> at <a href="https://bloomington.iu.edu/index.html">Indiana University Bloomingtom</a>.
-            <p>Before that I was a Postdoctoral Scholar in the <a href="https://biostat.duke.edu/">Department of Biostatistics & Bioinformatics</a>  and the <a href="https://areas.fuqua.duke.edu/decision-sciences/">Fuqua School of Business</a> at <a href="https://duke.edu/">Duke University</a>, advised by <a href="https://people.duke.edu/~abn5/belloni-index.html">Alexandre Belloni</a> and <a href="https://ethanfangduke.github.io/homepage/">Ethan X. Fang</a>. I received my Ph.D. in <a href="https://statistics.sciences.ncsu.edu/">Statistics</a> from <a href="https://www.ncsu.edu/">North Carolina State University (NCSU)</a> in 2023, advised by <a href="https://minh-tang.github.io/">Minh Tang</a> and <a href="https://shuyang.wordpress.ncsu.edu/">Shu Yang</a>. During  my doctoral studies, I was also advised by <a href="https://sites.google.com/site/kongdehanstat/">Dehan Kong</a> and <a href="https://faculty.sites.uci.edu/weinings/">Weining Shen</a> on multiple research projects. I received a B.S. in <a href="https://math.scu.edu.cn/English.htm">Mathematics and Applied Mathematics</a> from <a href="https://en.scu.edu.cn/">Sichuan University</a> in 2018 .
+     <p>I am an assistant professor in <a href="https://stat.indiana.edu/index.html">Department of Statistics</a> at <a href="https://bloomington.iu.edu/index.html">Indiana University Bloomingtom</a>. 
+            
+            <p class="justified-text">Before that I was a Postdoctoral Scholar in the <a href="https://biostat.duke.edu/">Department of Biostatistics & Bioinformatics</a>  and the <a href="https://areas.fuqua.duke.edu/decision-sciences/">Fuqua School of Business</a> at <a href="https://duke.edu/">Duke University</a>, advised by <a href="https://people.duke.edu/~abn5/belloni-index.html">Alexandre Belloni</a> and <a href="https://ethanfangduke.github.io/homepage/">Ethan X. Fang</a>. I received my Ph.D. in <a href="https://statistics.sciences.ncsu.edu/">Statistics</a> from <a href="https://www.ncsu.edu/">North Carolina State University (NCSU)</a> in 2023, advised by <a href="https://minh-tang.github.io/">Minh Tang</a> and <a href="https://shuyang.wordpress.ncsu.edu/">Shu Yang</a>. During  my doctoral studies, I was also advised by <a href="https://sites.google.com/site/kongdehanstat/">Dehan Kong</a> and <a href="https://faculty.sites.uci.edu/weinings/">Weining Shen</a> on multiple research projects. I received a B.S. in <a href="https://math.scu.edu.cn/English.htm">Mathematics and Applied Mathematics</a> from <a href="https://en.scu.edu.cn/">Sichuan University</a> in 2018 .
                 
                  <h2><a href="mailto:yiczhan@iu.edu">Email</a>   &nbsp;&nbsp;|&nbsp;&nbsp;
-                  <a href="https://scholar.google.com/citations?hl=en&user=7jdkZhUAAAAJ">Google Scholar</a> &nbsp;&nbsp;|&nbsp;&nbsp;<a>Address:</a><strong style="font-weight:normal"> Swain Hall East 235, 729 E. 3rd Street, Bloomington, IN 47405</strong></h2> 
+                  <a href="https://scholar.google.com/citations?hl=en&user=7jdkZhUAAAAJ">Google Scholar</a> &nbsp;&nbsp;|&nbsp;&nbsp;<span class="address-container">
+                                                <a id="address-toggle" style="cursor: pointer;">Address</a>
+                                                <strong id="address" class="hidden-address" style="font-weight: normal;"> Swain Hall East 235, 729 E. 3rd Street, Bloomington, IN 47405  </strong>
+                                            </span></h2> 
                
-                  
+ 
                 
             </div
               </td>
@@ -45,7 +87,24 @@
                 <a href="images/yichi.jpeg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/yichi.jpeg" class="hoverZoomLink"></a>
               </td>
             </tr>
-          </tbody></table>
+          </tbody></table> <script>
+        const addressToggle = document.getElementById('address-toggle');
+        const address = document.getElementById('address');
+
+        addressToggle.addEventListener('click', () => {
+            if (address.style.display === 'none' || address.style.display === '') {
+                address.style.display = 'inline';
+            } else {
+                address.style.display = 'none';
+            }
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!addressToggle.contains(event.target) && !address.contains(event.target)) {
+                address.style.display = 'none';
+            }
+        });
+    </script>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
               <tr>
               <td style="padding:0px;width:100%;vertical-align:middle">
